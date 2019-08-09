@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<?php include('Model/BusinesspartnerModel.php'); ?>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="assets/Script.js">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+	<script src="assets/app.js"></script>
+
+    <title>Business Partner</title>
+</head>
+<body>
+    <nav class="navbar">
+        <span class="open-slide">
+            <a href="#" onclick="openSlideMenu()">
+                <svg width="30" height="30">
+                    <path d="M0,5 30,5" stroke="#000" stroke-width="5" />
+                    <path d="M0,14 30,14" stroke="#000" stroke-width="5" />
+                    <path d="M0,23 30,23" stroke="#000" stroke-width="5" />
+                </svg>
+            </a>
+        </span>
+    </nav>
+    <div id="side-menu" class="side-nav">
+        <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+        <ul class="side-nav-ul">
+            <li>
+                <a href="#">DASHBOARD</a>
+            </li>
+            <li>
+                <a href="#">BUSINESS PARTNER</a>
+            </li>
+            <li>
+                <a href="#">SERVICE PROVIDER</a>
+            <li>
+                <a href="#">BOOKING</a>
+            </li>
+            <li>
+                <a href="#">REPORTS</a>
+            </li>
+            <li>
+                <a href="#">SETTING</a>
+            </li>
+        </ul>
+        <ul class="loginadmin">
+            <li>
+                <a href="#" id="logasadmin">LOGGED AS ADMIN</a>
+            </li>
+        </ul>
+    </div>
+
+    <div id="container" >
+	 <form method="post">
+        <div class="card mt-3">
+            <div class="card-body">
+                <div class="row">
+                    <h3 class="col-sm-12 col-md-6">BUSINESS PARTNER</h3>
+                    <a href="#" style="color: black;" class="pull-right col-sm-12 col-md-6 dropdown-toggle" id="celDropdown" data-toggle="dropdown"
+                        aria-haspopup="false" aria-expanded="false">
+                        <h3>CEL LOGISTICS - MANILA</h3>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="celDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                
+                </div>
+                <!-- Icons -->
+                <a href="#" style="color: black;" class="btn">
+                    <i class="fa fa-plus"></i>
+                </a>
+                <a href="#" style="color: black;" class="btn">
+                    <i class="fa fa-trash"></i>
+                </a>
+                <a href="#" style="color: black;" class="btn" name="save">
+                    <i class="fa fa-save"></i>
+                </a>
+                <a href="#" style="color: black;" class="btn">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                <a href="#" style="color: black;" class="btn">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                <!-- Icons -->
+
+                <!-- Dropdown -->
+                <a href="#" style="color: black;" class="btn dropdown-toggle" id="actionDropdown" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Actions
+                </a>
+                <div class="dropdown-menu" aria-labelledby="actionDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+                <a href="#" style="color: black;" class="btn dropdown-toggle" id="reportDropdown" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Reports
+                </a>
+                <div class="dropdown-menu" aria-labelledby="reportDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+                <!-- Dropdown -->
+            </div>
+        </div>
+        <div class="card mt-2">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+                        <label for="">Partner ID:</label>
+                    </div>
+                </div>
+                <!-- Row -->
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-4 col-lg-4">
+                                <label class="col-form-label-sm" for="">Business Partner:</label>
+                            </div>
+                            <div class="col-sm-12 col-md-8 col-lg-8">
+                                <div class="input-group">
+                                    <input type="text" name="business_partner" class="form-control form-control-sm" placeholder="Search for..." aria-label="Search for...">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-secondary" type="button"><i class="fa fa-search"></i></button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+                        <div class="form-group row">
+                            <label class="col-sm-12 col-md-3 col-lg-3 col-form-label-sm">Status:</label>
+                            <select name="status" class="form-control form-control-sm col-sm-12 col-md-9 col-lg-9" id="">
+                                <option value="">Active</option>
+                                <option value="">Dormant</option>
+                                <option value="">Delinquent</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <!-- Row -->
+
+                <!-- Tab Menu -->
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="general-info" data-toggle="tab" href="#general_info" role="tab" aria-controls="home"
+                            aria-selected="true">General Info</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="financial-info" data-toggle="tab" href="#financial_info" role="tab" aria-controls="profile"
+                            aria-selected="false">Financial Info</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="activities-tab" data-toggle="tab" href="#activities" role="tab" aria-controls="contact"
+                            aria-selected="false">Activities</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="general_info" role="tabpanel" aria-labelledby="general-info">
+                       
+                            <h5>Information</h5>
+                            <div class="form-group row">
+                                <label for="" class="col-form-label col-sm-12 col-md-2 col-lg-2">Company Name:</label>
+                                <div class="input-group col-sm-12 col-md-10 col-lg-10">
+                                    <input type="text" class="form-control form-control-sm" name="company_name">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-sm" type="button"><i class="fa fa-user"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Row -->
+                            <div class="row">
+                                <div class="col-sm-12 col-md-6 col-lg-6">
+                                    <div class="form-group row">
+                                        <label for="" class="col-form-label col-sm-12 col-md-3 col-lg-3">Attention:</label>
+                                        <div class="input-group col-sm-12 col-md-9 col-lg-9">
+                                            <input type="text" class="form-control form-control-sm" name="attention">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-sm" type="button"><i class="fa fa-user"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-6">
+                                    <div class="form-group row">
+                                        <label for="" class="col-form-label col-sm-12 col-md-3 col-lg-3">web:</label>
+                                        <div class="input-group col-sm-12 col-md-9 col-lg-9">
+                                            <input type="text" class="form-control form-control-sm" name="web">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-sm" type="button"><i class="fa fa-user"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Row -->
+
+                            <!-- Row -->
+                            <div class="row">
+                                <div class="col-sm-12 col-md-6 col-lg-6">
+                                    <div class="form-group row">
+                                        <label for="" class="col-form-label col-sm-12 col-md-3 col-lg-3">Email:</label>
+                                        <div class="input-group col-sm-12 col-md-9 col-lg-9">
+                                            <input type="text" class="form-control form-control-sm" name="email">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-sm" type="button"><i class="fa fa-user"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-6">
+                                </div>
+                            </div>
+                            <!-- Row -->
+
+                            <!-- Row -->
+                            <div class="row">
+                                <div class="col-sm-12 col-md-6 col-lg-6">
+                                    <div class="form-group row">
+                                        <label for="" class="col-form-label col-sm-12 col-md-3 col-lg-3">Phone 1:</label>
+                                        <div class="input-group col-sm-12 col-md-9 col-lg-9">
+                                            <input type="text" class="form-control form-control-sm" name="phone_1">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-sm" type="button"><i class="fa fa-phone"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-6">
+                                </div>
+                            </div>
+                            <!-- Row -->
+
+                            <!-- Row -->
+                            <div class="row">
+                                <div class="col-sm-12 col-md-6 col-lg-6">
+                                    <div class="form-group row">
+                                        <label for="" class="col-form-label col-sm-12 col-md-3 col-lg-3">Phone 2:</label>
+                                        <div class="input-group col-sm-12 col-md-9 col-lg-9">
+                                            <input type="text" class="form-control form-control-sm" name="phone_2">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-sm" type="button"><i class="fa fa-phone"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-6">
+                                </div>
+                            </div>
+                            <!-- Row -->
+                            <hr>
+                            <h5>Addres</h5>
+                            <!-- Row -->
+                            <div class="row">
+                                <div class="col-sm-12 col-md-6 col-lg-6">
+                                    <div class="form-group row">
+                                        <label for="" class="col-form-label col-sm-12 col-md-3 col-lg-3">Address 1:</label>
+                                        <div class="input-group col-sm-12 col-md-9 col-lg-9">
+                                            <input type="text" class="form-control form-control-sm" name="address_1">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-sm" type="button"><i class="fa fa-map-marker"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-6">
+                                    <div class="form-group row">
+                                        <label for="" class="col-form-label col-sm-12 col-md-3 col-lg-3">State:</label>
+                                        <div class="input-group col-sm-12 col-md-9 col-lg-9">
+                                            <input type="text" class="form-control form-control-sm" name="state">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-sm" type="button"><i class="fa fa-map-marker"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Row -->
+
+                            <!-- Row -->
+                            <div class="row">
+                                <div class="col-sm-12 col-md-6 col-lg-6">
+                                    <div class="form-group row">
+                                        <label for="" class="col-form-label col-sm-12 col-md-3 col-lg-3">Address 2:</label>
+                                        <div class="input-group col-sm-12 col-md-9 col-lg-9">
+                                            <input type="text" class="form-control form-control-sm" name="address_2">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-sm" type="button"><i class="fa fa-map-marker"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-6">
+                                    <div class="form-group row">
+                                        <label for="" class="col-form-label col-sm-12 col-md-3 col-lg-3">Postal:</label>
+                                        <div class="input-group col-sm-12 col-md-9 col-lg-9">
+                                            <input type="text" class="form-control form-control-sm" name="postal">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-sm" type="button"><i class="fa fa-map-marker"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Row -->
+
+                            <!-- Row -->
+                            <div class="row">
+                                <div class="col-sm-12 col-md-6 col-lg-6">
+                                    <div class="form-group row">
+                                        <label for="" class="col-form-label col-sm-12 col-md-3 col-lg-3">City:</label>
+                                        <div class="input-group col-sm-12 col-md-9 col-lg-9">
+                                            <input type="text" class="form-control form-control-sm" name="city">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-sm" type="button"><i class="fa fa-map-marker"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-6">
+                                    <div class="form-group row">
+                                        <label for="" class="col-form-label col-sm-12 col-md-3 col-lg-3">Country:</label>
+                                        <div class="input-group col-sm-12 col-md-9 col-lg-9">
+                                            <input type="text" class="form-control form-control-sm" name="country">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-sm" type="button"><i class="fa fa-map-marker"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Row -->
+               
+                    </div>
+                    <div class="tab-pane fade" id="financial_info" role="tabpanel" aria-labelledby="financial-info">
+                        
+                            <h5>Financial</h5>
+                            <div class="form-group row">
+                                <label class="col-form-label col-sm-12 col-md-3 col-lg-3">Terms:</label>
+                                <div class="col-sm-12 col-md-9 col-lg-9">
+                                    <select name="" class="form-control form-control-sm" id="">
+                                        <option value="">SELECT TERMS</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-form-label col-sm-12 col-md-3 col-lg-3">Payment Method:</label>
+                                <div class="col-sm-12 col-md-9 col-lg-9">
+                                    <select name="" class="form-control form-control-sm" id="">
+                                        <option value="">SELECT Payment Method</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-form-label col-sm-12 col-md-3 col-lg-3">Currency:</label>
+                                <div class="col-sm-12 col-md-9 col-lg-9">
+                                    <select name="" class="form-control form-control-sm" id="">
+                                        <option value="">SELECT Currency</option>
+                                    </select>
+                                </div>
+                            </div>
+        
+                    </div>
+                    <div class="tab-pane fade" id="activities" role="tabpanel" aria-labelledby="activities-tab">
+                        <h5>Transaction History</h5><hr>
+                    </div>
+                </div>
+                <!-- Tab Menu -->
+            </div>
+        </div>
+		</form>
+    </div>
+
+	
+	<script src="assets/jquery/jquery-3.2.1.min.js"></script>
+    <script src="assets/jquery/popper.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    
+</body>
+</html>
