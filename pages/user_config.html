@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>User Configuration</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="../vendors/iconfonts/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="../vendors/css/vendor.bundle.base.css">
+  <link rel="stylesheet" href="../vendors/css/vendor.bundle.addons.css">
+  <!-- endinject -->
+  <!-- plugin css for this page -->
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="../css/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="http://www.urbanui.com/"/>
+  <link rel="stylesheet" type="text/css" href="../css/custom.css">
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/js&jqueryfunc.js"></script>
+<style>
+    h5 {
+   width: 100%; 
+   text-align: left;
+   border-bottom: 1px solid #000; 
+   line-height: 0.2em;
+   margin: 10px 0 20px; 
+} 
+
+h5 span { 
+    background:#fff; 
+    padding:0 10px; 
+    font-size: 20px;
+}
+#m0, #m1, #m2, #m3, #m4, #m5, #m6, #m7{
+  font-size: 12px;
+}
+</style>
+</head>
+</head>
+<body class="idebar-fixed">
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row default-layout-navbar">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <a class="navbar-brand brand-logo"><img src="../images/faces/cel.png" alt="logo" /></a>
+        <a class="navbar-brand brand-logo-mini"><img src="../images/faces/cel.png" alt="logo"/></a>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-stretch">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <span class="fas fa-bars"></span>
+        </button>
+       
+        <ul class="navbar-nav navbar-nav-right">
+       
+          <li class="nav-item nav-profile dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+              <img src="../images/faces/noimage.jpg" alt="profile"/>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a class="dropdown-item">
+                <i class="fas fa-cog text-primary"></i>
+                Settings
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item">
+                <i class="fas fa-power-off text-primary"></i>
+                Logout
+              </a>
+            </div>
+          </li>
+          <li class="nav-item nav-settings d-none d-lg-block">
+            <a class="nav-link" href="#">
+              <i class="fas fa-ellipsis-h"></i>
+            </a>
+          </li>
+        </ul>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas" >
+          <span class="fas fa-bars"></span>
+        </button>
+      </div>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:partials/_settings-panel.html -->
+      <div class="theme-setting-wrapper">
+        <div id="settings-trigger"><i class="fas fa-fill-drip"></i></div>
+        <div id="theme-settings" class="settings-panel">
+          <i class="settings-close fa fa-times"></i>
+          <p class="settings-heading">SIDEBAR SKINS</p>
+          <div class="sidebar-bg-options selected" id="sidebar-light-theme"><div class="img-ss rounded-circle bg-light border mr-3"></div>Light</div>
+          <div class="sidebar-bg-options" id="sidebar-dark-theme"><div class="img-ss rounded-circle bg-dark border mr-3"></div>Dark</div>
+          <p class="settings-heading mt-2">HEADER SKINS</p>
+          <div class="color-tiles mx-0 px-4">
+            <div class="tiles primary"></div>
+            <div class="tiles success"></div>
+            <div class="tiles warning"></div>
+            <div class="tiles danger"></div>
+            <div class="tiles info"></div>
+            <div class="tiles dark"></div>
+            <div class="tiles default"></div>
+          </div>
+        </div>
+      </div>
+      <div id="right-sidebar" class="settings-panel">
+        <i class="settings-close fa fa-times"></i>
+        <ul class="nav nav-tabs" id="setting-panel" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="todo-tab" data-toggle="tab" href="#todo-section" role="tab" aria-controls="todo-section" aria-expanded="true">TO DO LIST</a>
+          </li>
+          
+        </ul>
+        <div class="tab-content" id="setting-content">
+          <div class="tab-pane fade show active scroll-wrapper" id="todo-section" role="tabpanel" aria-labelledby="todo-section">
+            <div class="add-items d-flex px-3 mb-0">
+              <form class="form w-100">
+                <div class="form-group d-flex">
+                  <input type="text" class="form-control todo-list-input" placeholder="Add To-do">
+                  <button type="submit" class="add btn btn-primary todo-list-add-btn" id="add-task-todo">Add</button>
+                </div>
+              </form>
+            </div>
+             <div class="list-wrapper px-3">
+              <ul class="d-flex flex-column-reverse todo-list">
+               
+            
+              
+             
+          
+              </ul>
+            </div>
+           
+          </div>
+          <!-- To do section tab ends -->
+          <!-- chat tab ends -->
+        </div>
+      </div>
+
+      <!-- partial -->
+      <!-- partial:partials/_sidebar.html -->
+         <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+         
+          <li class="nav-item">
+            <a class="nav-link" href="../index.php">
+              <i class="fas fa-align-center" id="icons"></i>
+               <span class="menu-title" id="m0">DASHBOARD</span>
+
+            </a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#businesspartner" aria-expanded="false" aria-controls="businesspartner">
+              <i class="fas fa-user-friends" id="icons"></i> 
+              <span class="menu-title" id="m1">BUSINESS PARTNER</span>
+               <i class="menu-arrow"></i>
+                <i class="fa fa-chevron-down" style="margin-left: 15px; color: black;"></i>
+            
+            </a>
+            <div class="collapse" id="businesspartner">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="customer_inquiry.html">Customer Inquiry</a></li>
+                <li class="nav-item"> <a class="nav-link" href="income_analysis.html">Income Analysis</a></li>
+                <li class="nav-item"> <a class="nav-link" >Approval</a></li>
+              </ul>
+            </div>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
+              <i class="fas fa-truck-moving" id="icons"></i>
+              <span class="menu-title" id="m2">SERVICE PROVIDER</span>
+              <i class="menu-arrow"></i>
+              <i class="fa fa-chevron-down" style="margin-left: 17px; color: black;"></i>
+            </a>
+            <div class="collapse" id="tables">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="service_provider.html">Service Provider</a></li>
+                <li class="nav-item"> <a class="nav-link" >Service</a></li>
+                <li class="nav-item"> <a class="nav-link" >Service</a></li>
+               
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+              <i class="fas fa-plane-departure" id="icons"></i>
+              <span class="menu-title" id="m3">BOOKING</span>
+              <i class="menu-arrow"></i>
+              <i class="fa fa-chevron-down" style="margin-left: 75px; color: black;"></i>
+            </a>
+            <div class="collapse" id="ui-basic">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="booking.html">Booking</a></li>
+                <li class="nav-item"> <a class="nav-link" href="job_order.html">Job Order</a></li> 
+              </ul>
+              </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-advanced" aria-expanded="false" aria-controls="ui-advanced">
+              <i class="far fa-chart-bar" id="icons"></i>
+              <span class="menu-title" id="m4">REPORTS</span>
+              <i class="menu-arrow"></i>
+              <i class="fa fa-chevron-down" style="margin-left: 76px; color: black;"></i>
+            </a>
+            <div class="collapse" id="ui-advanced">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link">Dragula</a></li>
+                <li class="nav-item"> <a class="nav-link">Clipboard</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
+              <i class="fas fa-balance-scale" id="icons"></i>
+              <span class="menu-title" id="m5">FINANCE</span>
+              <i class="menu-arrow"></i>
+              <i class="fa fa-chevron-down" style="margin-left: 76px; color: black;"></i>
+            </a>
+            <div class="collapse" id="form-elements">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="acc_payable.html">Accounts Payable</a></li>                
+                <li class="nav-item"><a class="nav-link" href="acc_recievable.html">Accounts Recievable</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#editors" aria-expanded="false" aria-controls="editors">
+              <i class="fas fa-cog" id="icons"></i>
+              <span class="menu-title" id="m6">SETTINGS</span>
+              <i class="menu-arrow"></i>
+              <i class="fa fa-chevron-down" style="margin-left: 76px; color: black;"></i>
+            </a>
+            <div class="collapse" id="editors">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="company_setup.html">Company Setup</a></li>
+                <li class="nav-item"><a class="nav-link" href="user_config.html">User Configuration</a></li>
+              </ul>
+            </div>
+          </li>
+
+        
+          <li class="nav-item nav-profile" style="padding-top: 100px;">
+            <div class="nav-link">
+              <div class="profile-image">
+                <img src="../images/faces/noimage.jpg" alt="image"/>
+              </div>
+              <div class="profile-name">
+                <p class="name">
+                  Welcome Back
+                </p>
+                <p class="designation">
+                  Super Admin
+                </p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <!-- partial -->
+  <div class="main-panel">
+                <div class="content-wrapper">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h3>User Configuration</h3>
+                                </div>
+                                <div class="col-md-6">
+                                    <h3 class="pull-right">CEL LOGISTICS-MANILA</h3>
+                                </div>
+                            </div>
+                            <a href="#" style="color: black;" class="btn">
+                                <i class="fa fa-plus"></i>
+                            </a>
+                            <a href="#" style="color: black;" class="btn">
+                                <i class="fa fa-trash"></i>
+                            </a>
+                            <a href="#" style="color: black;" class="btn">
+                                <i class="fa fa-save"></i>
+                            </a>
+                            <a href="#" style="color: black;" class="btn">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a href="#" style="color: black;" class="btn">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                            <a href="#" style="color: black;" class="btn dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                Actions
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                            <a href="#" style="color: black;" class="btn dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                Reports
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                   <div class="form-group row">
+                                        <label class="col-md-3 col-form-label" for="">User Login:</label>
+                                        <div class="input-group col-md-9">
+                                            <input type="text" class="form-control"  aria-label="Recipient's username">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-sm" type="button"><i class="fa fa-search"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="col-md-3 col-form-label">Status:</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group row">
+                                        <label class="col-md-3 col-form-label" for="">Password:</label>
+                                        <div class="input-group col-md-9">
+                                            <input type="text" class="form-control"  aria-label="Recipient's username">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group row">
+                                      
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    
+                                        <ul class="nav nav-pills " id="pills-tab-custom" role="tablist">
+                                        <li class="">
+                                            <a class="nav-link active" id="pills-home-tab-custom" data-toggle="pill"
+                                                href="#general_info" role="tab" aria-controls="pills-home"
+                                                aria-selected="true">
+                                                User Roles
+                                            </a>
+                                        </li>
+                                      
+                                    </ul>
+                                        
+                                    </div>
+                                </div>
+                                
+                            </div>
+    
+                        </div>
+                    
+
+                    <div class="card">
+                        <div class="card-body">
+                                 <div class="row">
+                                <div class="col-md-12">
+                                   
+                                    
+                                            <form action="">
+                                                <h5><span>User Details</span></h5>
+                                                <br>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group row">
+                                                            <label for=""
+                                                                class="col-form-label col-md-3">First Name:</label>
+                                                            <div class="input-group col-md-9">
+                                                                <input type="text" class="form-control"
+                                                                    aria-label="Recipient's username">
+                                                               
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group row">
+                                                            <label for="" class="col-form-label col-md-12"><i class="fas fa-expand" style="margin-right: 30px;"></i>Allow Password Recovery</label>
+                                                      
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group row">
+                                                            <label for="" class="col-form-label col-md-3">Last Name:</label>
+                                                            <div class="input-group col-md-9">
+                                                                <input type="text" class="form-control"
+                                                                    aria-label="Recipient's username">
+                                                               
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group row">
+                                                            <label for="" class="col-form-label col-md-12"><i class="fas fa-expand" style="margin-right: 30px;"></i>Allow Password Changes</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group row">
+                                                            <label for="" class="col-form-label col-md-3">Email
+                                                                :</label>
+                                                            <div class="input-group col-md-9">
+                                                                <input type="text" class="form-control"
+                                                                    aria-label="Recipient's username">
+                                                                
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group row">
+                                                            <label for="" class="col-form-label col-md-12"><i class="fas fa-expand" style="margin-right: 30px;"></i>Password Never Expires</label>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                 <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group row">
+                                                            
+                                                            
+                                                        </div>
+                                                    </div>
+                                                      <div class="col-md-6">
+                                                        <div class="form-group row">
+                                                            <label for="" class="col-form-label col-md-12"><i class="fas fa-expand" style="margin-right: 30px;"></i>Force User to Change Password on First Login</label>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                              
+
+                                            </form>
+
+                                     
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h5><span>Role Details</span></h5>
+                            
+                           <div class="row">
+                              <a href="#" style="color: black;" class="btn">
+                                <i class="fa fa-plus"></i>
+                            </a>
+                            <a href="#" style="color: black;" class="btn">
+                                <i class="fa fa-trash"></i>
+                            </a>
+                            <a href="#" style="color: black;" class="btn">
+                                <i class="fa fa-save"></i>
+                            </a>  
+                           </div> 
+                           <hr>
+                           <div class="row">
+                               
+                                   <div class="col-lg-12">
+                        <ul class="nav nav-pills" role="tablist">
+                        <li class="col-md-1">
+                          <a class="nav-link" data-toggle="pill" href="#home"><center><i class="fas fa-expand" ></i></center></a>
+                        </li>
+                        <li class="col-md-5">
+                          <a class="nav-link " data-toggle="pill" href="#home"><center>Role Name</center></a>
+                        </li>
+                        <li class="col-md-6">
+                          <a class="nav-link" data-toggle="pill" href="#menu1"><center>Role Description</center></a>
+                        </li>
+                        
+                        </ul>
+                         </div> 
+                           </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+        </div>
+
+       
+
+       
+
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+
+  <!-- plugins:js -->
+  <script src="../vendors/js/vendor.bundle.base.js"></script>
+  <script src="../vendors/js/vendor.bundle.addons.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page-->
+  <!-- End plugin js for this page-->
+  <!-- inject:js -->
+  <script src="../js/off-canvas.js"></script>
+  <script src="../js/hoverable-collapse.js"></script>
+  <script src="../js/misc.js"></script>
+  <script src="../js/settings.js"></script>
+  <script src="../js/todolist.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="../js/dashboard.js"></script>
+  <!-- End custom js for this page-->
+</body>
+
+
+</html>
